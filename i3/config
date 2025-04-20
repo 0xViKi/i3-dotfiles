@@ -97,7 +97,7 @@ smart_gaps inverse_outer
 # START PICOM COMPOSITOR
 exec --no-startup-id picom -b
 
-exec --no-startup-id /usr/bin/sh ~/setwall.sh 
+exec --no-startup-id /usr/bin/sh ~/.config/feh/setwall.sh 
 
 # CUSTOM LAUNCHER VARIABLE
 # set $terminal i3-sensible-terminal
