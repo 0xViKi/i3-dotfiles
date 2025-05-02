@@ -1,6 +1,6 @@
 # i3wm Dotfiles
 
-![Desktop Screenshot](https://github.com/yourusername/i3-dotfiles/raw/main/screenshot.png)
+![Desktop Screenshot](./assets/terminal.png)
 
 A collection of my personal dotfiles for i3 window manager setup, including configurations for picom, Neovim, feh, Starship prompt, and ZSH.
 
@@ -15,17 +15,14 @@ A collection of my personal dotfiles for i3 window manager setup, including conf
 
 ## Installation
 
+> If running on Virtual machine ****ENABLE 3D ACCELERATION****  
+
 ### Prerequisites
 
 ```bash
 # Debian/Ubuntu
-sudo apt install i3-wm i3status i3lock picom neovim feh zsh
-
-# Arch Linux
-sudo pacman -S i3-wm i3status i3lock picom neovim feh zsh
-
-# Fedora
-sudo dnf install i3 i3status i3lock picom neovim feh zsh
+chmod +x install-dependency.sh
+./install-dependency.sh
 ```
 
 Install Starship:
