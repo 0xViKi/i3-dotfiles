@@ -1,5 +1,7 @@
 # i3wm Dotfiles
 
+## Screenshot
+
 ![Desktop Screenshot](./assets/terminal.png)
 ![Desktop Screenshot](./assets/browser.png)
 ![Desktop Screenshot](./assets/dmenu.png)
@@ -154,14 +156,7 @@ Feel free to modify any of these files to suit your preferences:
 - Adjust prompt appearance in `starship.toml`
 - Customize Neovim plugins in `nvim/init.vim` or `nvim/init.lua`
 
-## Screenshots
-
-![Terminal and Editor](https://github.com/yourusername/i3-dotfiles/raw/main/screenshot2.png)
-
-![Multiple Windows](https://github.com/yourusername/i3-dotfiles/raw/main/screenshot3.png)
-
 ## Contributing
-
 Feel free to fork this repository and submit pull requests if you want to improve these configurations.
 
 ## License
