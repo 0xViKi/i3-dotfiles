@@ -1,6 +1,9 @@
 # i3wm Dotfiles
 
 ![Desktop Screenshot](./assets/terminal.png)
+![Desktop Screenshot](./assets/browser.png)
+![Desktop Screenshot](./assets/dmenu.png)
+![Desktop Screenshot](./assets/powermenu.png)
 
 A collection of my personal dotfiles for i3 window manager setup, including configurations for picom, Neovim, feh, Starship prompt, and ZSH.
 
