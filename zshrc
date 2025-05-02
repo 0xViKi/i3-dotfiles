@@ -268,8 +268,6 @@ if [ -f /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
 fi
 
-# Custom Path Exports
-export PATH="$PATH:$HOME/.cargo/bin/"
 
 # Startup Zoxide
 eval "$(zoxide init zsh)"
@@ -277,12 +275,7 @@ eval "$(zoxide init zsh)"
 # Startup Starship
 eval "$(starship init zsh)"
 
+# Initalize Custom Alias and Path
+source ~/.zsh_alias
 
-# Source ZSH-Syntax Hightlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Custom Alias
-alias cd="z"
-alias ls="eza --icons=always --color=always"
-alias cat="bat"
-alias vim="nvim"

@@ -1,0 +1,19 @@
+# Custom Paths
+# export PATH=$PATH:~/.config/rofi/scripts/
+
+# Custom Alias
+
+alias cd="z"
+alias ls="eza --icons=always --color=always"
+alias cat="batcat"
+alias vim="nvim"
+alias cleanup="sudo apt autoremove && sudo apt autoclean && sudo apt clean && echo '\nCleaned!!!' || echo '\nCleanup Failed!!!'"
+alias upgrade="sudo apt update && sudo apt upgrade -y && echo '\nUpgraded...' || echo '\nFailed Upgrade...'"
+
+# Custom Functions
+
+# Shows only the required packages
+search() {
+    apt search "$1" 2>/dev/null | grep -i "$1" -C2
+}
+

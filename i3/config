@@ -90,29 +90,39 @@ client.urgent           $bor-urgent 	$bg-urgent	$txt-focused 	$indi-urgent  	$cb
 client.placeholder      $bor-pholder	$bg-pholder	$txt-focused 	$indi-pholder  	$cbor-pholder
 
 # i3 GAPS
-gaps inner 8px
+gaps inner 7px
 gaps outer 5px
 smart_gaps inverse_outer
 
 # START PICOM COMPOSITOR
-exec --no-startup-id picom -b
+# exec --no-startup-id picom
 
 exec --no-startup-id /usr/bin/sh ~/.config/feh/setwall.sh 
 
 # CUSTOM LAUNCHER VARIABLE
-# set $terminal i3-sensible-terminal
 
 set $terminal konsole
 set $menu $HOME/.config/rofi/launchers/type-3/launcher.sh
+set $powermenu $HOME/.config/rofi/powermenu/type-2/powermenu.sh
+set $filemanager thunar
+
 
 # start a terminal
 bindsym $mod+Return exec $terminal
 
+
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
+
+# start dmenu (a program launcher)
+bindsym $mod+Shift+e exec --no-startup-id $filemanager
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id $menu
+
+# Launch powermenu (a program logoff, shutdown)
+bindsym $mod+x exec --no-startup-id $powermenu
+
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -206,12 +216,15 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
+# Application Workspace
+assign [class="Brave"] number "2: Browser"
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -243,5 +256,6 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+	position top
         status_command i3status
 }
